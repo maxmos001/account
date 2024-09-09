@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Common styles
+ */
+html {
+  @apply text-gray-800;
+}
+
+.monospace {
+ font-family: 'Roboto Mono', monospace;
+}
+
+.box {
+  @apply w-full p-4 md:p-6 bg-white rounded-lg;
+}
+.box h4 {
+  @apply w-full mb-4 font-medium;
+}
+.box h5 {
+  @apply w-full mb-4 font-medium;
+}
+
+/*
+  FORM STYLES
+*/
+.input-group {
+  @apply relative flex flex-col space-y-1;
+}
+
+/* input */
+.input-group .input--floating {
+  @apply pb-px text-lg border-b border-gray-400 text-gray-600;
+  @apply focus:outline-none focus:border-green focus:text-green;
+}
+.input-group__error .input--floating {
+  @apply border-red text-red;
+  @apply focus:border-red;
+}
+
+/* label */
+.input-group .label, .input-group label {
+  @apply text-gray-500;
+}
+.input-group__error  .label, .input-group__error  label {
+  @apply text-red;
+}
+
+/* disabled inputs */
+input.disabled {
+  @apply cursor-not-allowed opacity-50;
+}
+
+/* error */
+.errorMessage {
+  @apply flex items-center space-x-1 text-xs font-medium text-red;
+}
+
+/*
+  TYPOGRAPHY
+*/
+.loose {
+  @apply tracking-widest text-sm;
+}
+
+/* tabs */
+.tabGroup {
+  @apply relative;
+}
+
+.tabs {
+  @apply w-full space-x-4 md:space-x-8 border-b border-gray-300 overflow-auto flex flex-nowrap;
+}
+.tab {
+  @apply pb-1 font-medium border-b text-gray-500 border-transparent flex-shrink-0 w-max;
+  @apply hover:text-black;
+}
+.tab:focus,
+.tab a:focus {
+  outline: none;
+}
+.tab.tab--selected {
+  @apply text-green border-green;
+  @apply hover:text-green;
+}

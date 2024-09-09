@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <script src="<%= BASE_URL %>assets/js/bodyScrollLock.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://eu.umami.is/script.js" data-website-id="1dbdd1e0-d8fd-40cb-a564-7e60bfd7041b"></script>
+    <title>Edge Account Portal</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but Edge Account Portal doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- Crisp chatbox -->
+    <script type="text/javascript">
+      window.CRISP_WEBSITE_ID="<%= VUE_APP_CRISP_WEBSITE_ID %>";
+      if (window.CRISP_WEBSITE_ID) {
+        window.$crisp=[];(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+      }
+    </script>
+  </body>
+</html>
